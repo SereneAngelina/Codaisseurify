@@ -1,0 +1,19 @@
+<div class = "row">
+
+  <div class="panel panel-warning col-md-6 col-md-offset-3">
+
+      <div class="panel-heading text-center">
+        <h3>Artists</h3>
+      </div>
+
+      <div class="panel-body text-center">
+        <% @artists.each do |artist| %>
+            <h4><%= link_to artist.artist_name, artist %></h4>
+                <%= image_tag artist.image_url.thumbnail %>
+             <p><%= artist.description %></p>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
