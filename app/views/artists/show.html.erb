@@ -1,0 +1,18 @@
+<div class = "row">
+
+  <div class="panel panel-warning col-md-6 col-md-offset-3">
+
+      <div class="panel-heading text-center">
+        <h3>Play list</h3>
+      </div>
+
+      <div class="panel-body text-center">
+        <% @artist.songs.each do |song| %>
+            <h4><%= song.song_name %></h4>
+            <%= link_to song.song_url %>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
