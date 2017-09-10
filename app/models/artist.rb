@@ -3,7 +3,11 @@ class Artist < ApplicationRecord
 
   mount_uploader :image_url, ImageUploader
 
-  validates :artist_name, presence: true, uniqueness: true
-  validates :image_url, presence: true
-  validates :description, presence: true, length: {maximum: 255}
+  validates :artist_name, presence: true, uniqueness: true, length: {maximum: 50}
+
+
+
+  def self.by_name(letter)
+    where("artist_name LIKE ?", "#{letter}%").order(:artist_name)
+  end
 end
