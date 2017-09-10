@@ -12,9 +12,13 @@ Artist.destroy_all
 mandisa = Artist.create!(artist_name: "Mandisa Lynn Hundley", description: "Contemporary Christian and Gospel Artist", remote_image_url_url: "http://res.cloudinary.com/dvmfuraf4/image/upload/v1504942789/mandisa_vydwoi.jpg" )
 toby = Artist.create!(artist_name: "Toby McKeehan", description: "Christian hip hop recording Artist", remote_image_url_url: "http://res.cloudinary.com/dvmfuraf4/image/upload/v1504942801/tobymac_lmdkim.jpg")
 don = Artist.create!(artist_name: "Donald James Don Moen", description: "American singer-songwriter, pastor, and producer of Christian worship music", remote_image_url_url: "http://res.cloudinary.com/dvmfuraf4/image/upload/v1504942798/Don-Moen_asyxnv.jpg")
+phil = Artist.create!(artist_name: "Phil Wichkam", description: "Christian Contemporary musician", remote_image_url_url: "http://res.cloudinary.com/dvmfuraf4/image/upload/v1504942796/phil2_yr9mbp.jpg")
 
 song1 = Song.create!(song_name: "Overcomer", song_url: "https://www.youtube.com/watch?v=b8VoUYtx0kw", artist: mandisa)
 song2 = Song.create!(song_name: "Good Morning", song_url: "https://www.youtube.com/watch?v=AnmWwudeqfM", artist: mandisa)
 
 song3 = Song.create!(song_name: "Give Thanks", song_url: "https://www.youtube.com/watch?v=DY1yS8VoyDU", artist: don)
 song4 = Song.create!(song_name: "Thank you lord", song_url: "https://www.youtube.com/watch?v=sax4aTgZ9dw", artist: don)
+
+song5 = Song.create!(song_name: "Good Good Father", song_url: "https://www.youtube.com/watch?v=DY1yS8VoyDU", artist: phil)
+song6 = Song.create!(song_name: "Thank you jesus", song_url: "https://www.youtube.com/watch?v=sax4aTgZ9dw", artist: phil)
