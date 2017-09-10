@@ -8,12 +8,22 @@
 
       <div class="panel-body text-center">
         <% @artist.songs.each do |song| %>
-            <h4><%= song.song_name %></h4>
+            <!-- <%= song.song_name %>
             <%= link_to song.song_url %>
-            <%= link_to "[Delete]", artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure?" } %>
+            <%= link_to '<i class="glyphicon glyphicon-trash color_red"></i>'.html_safe, artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure?" } %>
 
+         -->
 
-            
+    <ul class="list-group">
+        <li class="list-group-item clearfix">
+            <div class="song-title">  <%= song.song_name %></div>
+                     <%= link_to song.song_url %>
+            <div class="song-delete"> <%= link_to '<i class="glyphicon glyphicon-trash color_red"></i>'.html_safe, artist_song_path(@artist, song),
+            method: :delete, data: { confirm: "Are you sure?" } %></div>
+        </li>
+
+    </ul>
+
       <% end %>
       </div>
 

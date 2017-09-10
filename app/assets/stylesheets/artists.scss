@@ -1,3 +1,20 @@
 // Place all the styles related to the Artists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.color_red
+{
+  color : red;
+}
+.song-title {
+    float: left;
+    padding-right : 25px;
+}
+.song-delete
+{
+  float: right;
+}
+body
+{
+   //background-image: url("https://images7.alphacoders.com/319/319933.jpg")
+   background-image: url("http://st.depositphotos.com/1090295/2737/v/950/depositphotos_27377553-Hand-drawndoodle-music-icon-set.jpg")
+}
