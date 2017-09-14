@@ -3,19 +3,19 @@ require 'rails_helper'
 RSpec.describe Artist, type: :model do
 
   describe "validations" do
-    it "is invalid without artist_name" do
-      artist = Artist.new(artist_name: nil)
+    it "is invalid without name" do
+      artist = Artist.new(name: nil)
       artist.valid?
-      expect(artist.errors).to have_key(:artist_name)
+      expect(artist.errors).to have_key(:name)
     end
   end
 
   describe ".by_name" do
     subject { Artist.by_name("M") }
 
-    let(:mandissa) { create :artist, artist_name: "Mandissa" }
-    let(:ben) { create :artist, artist_name: "Ben" }
-    let(:merin) { create :artist, artist_name: "Merin" }
+    let(:mandissa) { create :artist, name: "Mandissa" }
+    let(:ben) { create :artist, name: "Ben" }
+    let(:merin) { create :artist, name: "Merin" }
 
 
     it "is sorted on name" do
@@ -28,8 +28,8 @@ RSpec.describe Artist, type: :model do
     let!(:song) { create :song, artist: artist }
 
     it "has many songs" do
-      song1 = artist.songs.new(song_name: "Good Morning")
-      song2 = artist.songs.new(song_name: "Good Morning")
+      song1 = artist.songs.new(name: "Good Morning")
+      song2 = artist.songs.new(name: "Good Morning")
 
       expect(artist.songs).to include(song1)
       expect(artist.songs).to include(song2)
