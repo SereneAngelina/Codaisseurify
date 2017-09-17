@@ -11,15 +11,19 @@
             <!-- <%= song.name %>
             <%= link_to song.url %>
             <%= link_to '<i class="glyphicon glyphicon-trash color_red"></i>'.html_safe, artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure?" } %>
-
          -->
 
     <ul class="list-group">
-        <li class="list-group-item clearfix">
+        <li class="list-group-item clearfix" id='<%= song.id %>'>
             <div class="song-title">  <%= song.name %></div>
                      <%= link_to song.url %>
-            <div class="song-delete"> <%= link_to '<i class="glyphicon glyphicon-trash color_red"></i>'.html_safe, artist_song_path(@artist, song),
-            method: :delete, data: { confirm: "Are you sure?" } %></div>
+                     <div class="song-delete">
+                       <%= button_tag 'Delete song', class: "btn btn-default", data: { confirm: 'Are you sure that you want delete this song?'},
+                     onclick: 'deleteSong(' + song.artist_id.to_s + ', ' + song.id.to_s + ')' %>
+                   </div>
+
+            <!-- <div class="song-delete"> <%= link_to '<i class="glyphicon glyphicon-trash color_red"></i>'.html_safe, artist_song_path(@artist, song),
+            method: :delete, data: { confirm: "Are you sure?" } %></div> -->
         </li>
 
     </ul>
@@ -35,4 +39,4 @@
 
     </div>
 
-  </div>
+</div>
