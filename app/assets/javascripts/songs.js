@@ -27,7 +27,7 @@ function addSong(artistId) {
       })
   })
   .done(function(data) {
-    alert('Song added successfully');
+    //alert('Song added successfully');
     $('#name').val(null);
     $('#url').val(null);
     location.reload();
