@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=utf-8
+ETag: W/"9ba978e4f4a4f775189a86280197c861"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 5ecb7e67-282b-46fb-98c9-8b2cf2dcae26
+X-Runtime: 0.074218
+Transfer-Encoding: chunked
+
+{"message":"Song deleted","artist":{"id":1,"name":"Mandisa Lynn Hundley","description":"Contemporary Christian and Gospel Artist","image_url":{"url":"http://res.cloudinary.com/dvmfuraf4/image/upload/v1505654473/tlrvp0jvzydgxdyvpfn0.jpg","thumbnail":{"url":"http://res.cloudinary.com/dvmfuraf4/image/upload/c_fit,h_200,q_80,w_200/v1505654473/tlrvp0jvzydgxdyvpfn0.jpg"}},"created_at":"2017-09-17T13:21:12.481Z","updated_at":"2017-09-17T13:21:12.481Z"},"song":{"id":1,"name":"Overcomer","url":"https://www.youtube.com/watch?v=b8VoUYtx0kw","created_at":"2017-09-17T13:21:16.711Z","updated_at":"2017-09-17T13:21:16.711Z","artist_id":1}}
