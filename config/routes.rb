@@ -8,8 +8,12 @@ end
 
 namespace :api do
   resources :artists do
-    resources :songs
+    resources :songs do
+         collection do
+            delete "destroy_all"
+          end
+     end
   end
-end
 
+ end
 end

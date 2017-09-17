@@ -31,6 +31,16 @@ skip_before_action :verify_authenticity_token
     }.to_json
 end
 
+def destroy_all
+    @artist = Artist.find(params[:artist_id])
+    @artist.songs.destroy_all
+    render status: 200, json: {
+      message: "Songs deleted"
+    }.to_json
+
+end
+
+
 
 private
 def playlist_params

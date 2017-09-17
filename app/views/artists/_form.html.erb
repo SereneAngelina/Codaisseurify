@@ -1,5 +1,5 @@
 
-<%= form_for [@artist, @artist.songs.new] do |f| %>
+<!-- <%= form_for [@artist] do |f| %> -->
 
 
       <div class="row text-center">
@@ -7,14 +7,14 @@
 
         <div class="form-group">
             <%= render 'shared/validation_errors' %>
-            <label>Song name :</label>
-            <%= f.text_field :name, placeholder: "Add song name" %>
-            <label>Song URL :</label>
-            <%= f.text_field :url, placeholder: "Add song url" %>
+            <input type="text" id = "name" placeholder =  "Add new song name"></input>
+            <input type="text" placeholder= "Add new song url" id = "url"></input>
+
         </div>
 
         <div class="actions">
-         <%= f.submit "Add new song", class: "btn btn-success" %>
+         <%= button_tag "Add new song", class: "btn btn-success", onclick: "addSong(" + @artist.id.to_s + ")" %>
+         <%= button_tag "Delete all",  class: "btn btn-success", data: { confirm: 'Are you sure that you want delete all songs?'}, onclick: "deleteAll(" + @artist.id.to_s + ")" %>
         </div>
 
         <% end %>

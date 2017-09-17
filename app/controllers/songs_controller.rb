@@ -27,6 +27,9 @@ def create
 #
 # end
 
+def show
+    @song = Song.find(params[:id])
+  end
 
 def destroy
     @artist = Artist.find(params[:artist_id])
@@ -38,6 +41,7 @@ def destroy
      end
 
 end
+
 
 
 private
