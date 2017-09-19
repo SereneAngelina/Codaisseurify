@@ -14,7 +14,7 @@
 
         <div class="actions">
          <%= button_tag "Add new song", class: "btn btn-success", id: "add-song", onclick: "addSong(" + @artist.id.to_s + ")" %>
-         <%= button_tag "Delete all",  class: "btn btn-success", data: { confirm: 'Are you sure that you want delete all songs?'}, onclick: "deleteAll(" + @artist.id.to_s + ")" %>
+         <%= button_tag "Delete all",  class: "btn btn-danger", id: "delete-all-songs", data: { confirm: 'Are you sure that you want delete all songs?'}, onclick: "deleteAll(" + @artist.id.to_s + ")" %>
         </div>
 
         <% end %>

@@ -42,7 +42,7 @@ function addSong(artistId) {
 function deleteAll(artistId) {
 $.ajax({
     type: "DELETE",
-    url:`/api/artists/${artistId}/songs/destroy_all`,
+    url:"/api/artists/"+ artistId +"/songs/destroy_all",
     contentType: "application/json",
     dataType: "json"
   })

@@ -1,7 +1,7 @@
 class Api::ArtistsController < ApplicationController
   def index
     render status: 200, json: {
-      rooms: Artist.all
+      artists: Artist.all
     }.to_json
   end
 

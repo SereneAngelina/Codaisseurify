@@ -25,9 +25,7 @@ skip_before_action :verify_authenticity_token
     song = @artist.songs.find(params[:id])
     song.destroy
     render status: 200, json: {
-      message: "Song deleted",
-      artist: @artist,
-      song: song
+      message: "Song deleted"
     }.to_json
 end
 

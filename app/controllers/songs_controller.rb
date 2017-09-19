@@ -9,7 +9,7 @@ def create
      respond_to do |format|
        if @new_song.save
          format.html { redirect_to @new_song.artist }
-         format.json { render :create, status: :created }
+         format.json { render json: @new_song, status: :created }
        else
          format.html { redirect_to @new_song.artist,  notice: 'Please enter valid details' }
          format.json { render json: @new_song.errors, status: :unprocessable_entity }
