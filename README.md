@@ -7,10 +7,10 @@ Rails app which is incharge of managing a collection of songs and their associat
 ## Getting Started
 Make sure you have [Ruby](https://www.ruby-lang.org/en/) and [Bundler](http://bundler.io/) installed.
 
-1.Clone the project
-2.bundle install
-3.rails db:create db:migrate db:seed
-4.rails server
+1. Clone the project
+2. bundle install
+3. rails db:create db:migrate db:seed
+4. rails server
 
 ## Usage
 This app helps in adding songs to an artist and manage the song list. It's build using Ruby on Rails via AJAX.
