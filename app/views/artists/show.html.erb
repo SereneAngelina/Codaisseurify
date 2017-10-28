@@ -1,38 +1,27 @@
 <div class = "row">
-
   <div class="panel panel-warning col-md-6 col-md-offset-3">
-
       <div class="panel-heading text-center">
         <h3>Play list</h3>
       </div>
 
-      <div class="panel-body text-center">
+     <div class="text-center">
+       <%= image_tag @artist.image_url.thumbnail %>
+     </div>
+
+     <div class="panel-body text-center">
         <% @artist.songs.each do |song| %>
              <ul class="list-group">
                  <li class="list-group-item clearfix" id='<%= song.id %>'>
                       <div class="song-title">  <%= song.name %> </div>
                         <%= link_to song.url %>
-                      <div class="song-delete">  <%= button_tag '<i class="glyphicon glyphicon-trash color_red"></i>'.html_safe,
-                      class: "btn btn-default", id: "delete-song", data: { confirm: 'Are you sure to delete this song?'},
-                     onclick: 'deleteSong(' + song.artist_id.to_s + ', ' + song.id.to_s + ')' %>
-                   </div>
+                         <a href="#" class="delete-song" artist-id="<%= song.artist_id %>" song-id="<%= song.id %>"><i class="glyphicon glyphicon-trash color_red song-delete"></i></a>
+                </li>
+             </ul>
+       <% end %>
+     </div>
 
-            <!-- <div class="song-delete"> <%= link_to '<i class="glyphicon glyphicon-trash color_red"></i>'.html_safe, artist_song_path(@artist, song),
-            method: :delete, data: { confirm: "Are you sure?" } %></div> -->
-        </li>
-
-    </ul>
-
-      <% end %>
-      </div>
-
-      <div>
-        <%= render 'form' %>
-      </div>
-
-
-
-
+    <div>
+      <%= render 'form' %>
     </div>
-
+  </div>
 </div>
